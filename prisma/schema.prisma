@@ -13,3 +13,9 @@ model user {
   pass  String @db.VarChar(256)
   id    Int    @id @default(autoincrement())
 }
+
+model produto {
+  idproduto Int    @id @default(autoincrement())
+  nome      String @db.VarChar(45)
+  valor     String @db.VarChar(45)
+}
