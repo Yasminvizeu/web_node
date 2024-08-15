@@ -17,3 +17,11 @@ git init
 git config --global user.name "Seu Nome"
 git config --global user.email "seuemail@gmail.com"
 ```
+
+
+### Prisma
+```
+npm intall prisma -D
+npx prisma init
+npx install @prisma:client
+```
