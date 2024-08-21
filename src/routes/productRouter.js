@@ -1,5 +1,5 @@
 import  express  from "express"
-import produtoById from "../controllers/produto/ProdutoById.js"
+//import produtoById from "../controllers/produto/produtoById.js"
 import createProduto from "../controllers/produto/createProduto.js"
 import editProduto from "../controllers/produto/editProduto.js"
 import editPhotoProduto from "../controllers/produto/editPhotoProduto.js"
