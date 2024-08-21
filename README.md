@@ -24,4 +24,7 @@ git config --global user.email "seuemail@gmail.com"
 npm intall prisma -D
 npx prisma init
 npx install @prisma:client
+npx prisma db pull
+npx prisma db push
+npx prisma generate
 ```
