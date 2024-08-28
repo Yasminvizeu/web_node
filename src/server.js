@@ -8,6 +8,11 @@ const port = PORT
 const host = HOST
 const environment = ENVIRONMENT
 
+//middle, pega o json que chega no body e tranforma de json pra objeto no req.body
+//converte o request body jason para objeto
+app.use(express.json())
+
+
 app.use('/user', userRouter)
 app.use('/produto', productRouter)
 

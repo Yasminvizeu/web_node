@@ -9,9 +9,11 @@ import deleteUser from "../controllers/user/deleteUser.js"
 
 const router = express.Router()
 
-router.get('/:id', userById)
-router.get('/list', userList)
+
+//define primeiro valores fixos e depois os dinamicos, prinicpalmente quando sao dos memso metodos
 router.post('/', createUser)
+router.get('/list', userList)
+router.get('/:id', userById)
 router.put('/:id', editUser)
 router.patch('/:id', editNameUser)
 router.delete('/:id', deleteUser)
