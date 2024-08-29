@@ -3,8 +3,7 @@ generator client {
 }
 
 datasource db {
-  // provider = "mysql"
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -16,7 +15,7 @@ model user {
 }
 
 model produto {
-  idproduto Int    @id @default(autoincrement())
-  nome      String @db.VarChar(45)
-  valor     String @db.VarChar(45)
+  id    Int    @id @default(autoincrement())
+  nome  String @db.VarChar(45)
+  valor String @db.VarChar(45)
 }

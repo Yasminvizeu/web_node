@@ -1,12 +1,13 @@
-import { update } from "../../models/userModel.js"
+import { update } from "../../models/produtoModel.js"
 
-const editNameUser = async (req, res) => {
+
+const editValorProduto =async (req, res) => {
     const { id } = req.params
-    const { name } = req.body
+    const { valor } = req.body
 
-    const user = { id: +id, name  }
+    const produto = { id: +id, valor  }
 
-    const result = await update(user)
+    const result = await update(produto)
 
     //erro 401 quando os dados nao chegam corretos
     if (!result)
@@ -17,8 +18,8 @@ const editNameUser = async (req, res) => {
 
     return res.json({
         success: "Nome do usuário atualizado com sucesso",
-        user: result
+        produto: result
     })
-    }
+}
 
-export default editNameUser
+export default editValorProduto

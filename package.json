@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/renancavichi/api-bke-express-2sem2024#readme",
   "dependencies": {
-    "@prisma/client": "^5.18.0",
+    "@prisma/client": "^5.19.0",
     "express": "^4.19.2"
   },
   "devDependencies": {
