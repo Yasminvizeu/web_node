@@ -1,11 +1,24 @@
-import { create } from "../../models/userModel.js"
+import { create, validateUser, validateUserToCreate} from "../../models/userModel.js"
 
 const createUser = async (req, res) => {
 
 
     const user = req.body
 
-    const result = await create(user)
+    const userValidated = validateUserToCreate(user)
+
+    console.log(userValidated)
+
+    if(userValidated?.error){
+        return res.status(400).json({
+            error: "erro ao criar usuario, verifique os dados",
+            fieldErrors: userValidated.error.flatten().fieldErrors
+        })
+        
+        console.log(userValidated.error)
+    }
+
+    const result = await create(userValidated.data)
 
     if (!result)
         return res.status(500).json({
